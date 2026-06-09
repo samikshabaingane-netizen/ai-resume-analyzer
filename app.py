@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from models import db
 from models import User
 from forms import RegisterForm, LoginForm
@@ -59,7 +59,7 @@ def login():
 
         if user:
 
-            return "Login Successful"
+            return redirect('/upload')
 
         else:
 
