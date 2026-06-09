@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4">Resume Analysis Result</h2>
+
+<div class="card p-4 shadow">
+
+    <h4>Detected Skills</h4>
+
+    <ul>
+        {% for skill in skills %}
+
+            <li>{{ skill }}</li>
+
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <h4>Suggested Career</h4>
+
+    <p>{{ career }}</p>
+
+    <hr>
+
+    <h4>Missing Skills</h4>
+
+    <ul>
+
+        {% for skill in missing %}
+
+            <li>{{ skill }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+    <hr>
+
+    <h4>Resume Score</h4>
+
+    <p>{{ score }}/100</p>
+
+</div>
+
+{% endblock %}
